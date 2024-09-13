@@ -1,6 +1,6 @@
 import React from 'react';
 import './KanbanCard.css'; // Add CSS for styling
-
+import { assets } from '../assets/assets';
 
 const KanbanCard = ({ ticket, user }) => {
     // Function to get the user image based on the user's name

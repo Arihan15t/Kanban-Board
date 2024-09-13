@@ -1,0 +1,71 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    width: 100vw; /* Make header full width */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+  }
+  
+  
+  
+  /* Display options button styling */
+  .display-options-btn {
+    background-color: white; /* Change button background to white */
+    color: black; /* Change text color to black */
+    border: 1px solid lightgray; /* Add a light black/gray border */
+    padding: 8px 8px;
+    cursor: pointer;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Hover effect for the button */
+  .display-options-btn:hover {
+    background-color: #f0f0f0; /* Lighter gray on hover */
+   
+  }
+  
+  /* Styling for the icon inside the button */
+  .display-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+  
+  .display-options-dropdown {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    position: absolute; /* Changed from relative to absolute */
+    z-index: 10; /* Increase z-index to ensure it appears above the kanban board */
+}
+
+
+
+  /* Styling individual dropdown option */
+  .dropdown-option {
+    margin-bottom: 10px;
+  }
+  
+  /* Label styling */
+  label {
+    margin-right: 90px;
+  }
+  
+  /* Styling for dropdown select elements */
+  select {
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+  }
+  

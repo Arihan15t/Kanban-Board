@@ -1,0 +1,83 @@
+/* Common styles for all status icons */
+
+
+
+.kanban-board {
+    display: flex;               /* Enable flexbox layout */
+    flex-direction: row;          /* Align items in a row */
+    flex-wrap: nowrap;            /* Prevent wrapping onto new lines */
+    overflow-x: auto;             /* Enable horizontal scrolling if necessary */
+    gap: 10px;     
+    background-color: #f4f5f8; 
+    width: 100vw;                  /* Full viewport width */
+    height: 100vh;  
+  }
+  
+  .kanban-group {
+    flex: 1;
+    margin: 10px;
+  }
+  
+  .kanban-column {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    position: relative;
+    margin-right: 10px; 
+  }
+  
+  .kanban-header {
+    display: flex;
+    justify-content: space-between; /* Aligns the text on the left and the icons on the right */
+    align-items: center; /* Vertically centers the content */
+    padding: 0 10px; /* Adds some padding for spacing */
+    margin-top: 20px;  
+  }
+  
+  .kanban-header h2 {
+    margin: 0;
+    font-size: 0.875rem;  /* Same as the image font size */
+    font-weight: normal; /* Remove bold styling */
+    color: #333; /* This matches the color in the image */
+    font-family: Arial, sans-serif; /* Use a clean, sans-serif font */
+  }
+  
+  .icons {
+    display: flex;
+    gap: 10px; /* Adds space between the icons */
+    align-items: center; /* Vertically align icons with the text */
+  }
+  
+  .add-icon, .menu-icon {
+    width: 20px; /* Set width for icons */
+    height: 20px;
+    cursor: pointer;
+    display: block; /* Ensure they are block-level elements */
+  }
+  
+.kanban-column .status-icon {
+    width: 16px; /* Adjust width to match the font size */
+    height: 16px; /* Adjust height to match the font size */
+    background-size: contain; /* Ensures icon scales properly */
+    display: inline-block; /* Ensure the icon aligns with text inline */
+    vertical-align: middle; /* Vertically centers the icon with the text */
+    margin-right: 5px; /* Add space between the icon and the text */
+  }
+  
+  /* Status-specific icons */
+  .kanban-column .todo-icon {
+    background: url('/src/assets/icons_FEtask/To-do.svg') no-repeat center;
+  }
+  
+  .kanban-column .in-progress-icon {
+    background: url('/src/assets/icons_FEtask/in-progress.svg') no-repeat center;
+  }
+  
+  .kanban-column .backlog-icon {
+    background: url('/src/assets/icons_FEtask/Backlog.svg') no-repeat center;
+  }
+  
+  .kanban-column .cancelled-icon {
+    background: url('/src/assets/icons_FEtask/Cancelled.svg') no-repeat center;
+  }
+  

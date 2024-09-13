@@ -12,8 +12,8 @@ const Header = ({ grouping, ordering, handleGroupingChange, handleOrderingChange
     <div className="header">
       <div className="left-section">
       <button className="display-options-btn" onClick={toggleDisplayOptions}>
-        <img src="/src/assets/icons_FEtask/Display.svg"  className="display-icon" />
-        Display  <img src="/src/assets/icons_FEtask/down.svg"  />
+        <img src="/src/assets/Display.png"  className="display-icon" />
+        Display  <img src="/src/assets/down.png"  />
         </button>
         {isDisplayOptionsVisible && (
           <div className="dropdown display-options-dropdown">

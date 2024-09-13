@@ -7,7 +7,7 @@ const KanbanCard = ({ ticket, user }) => {
     const getUserImage = (name) => {
       switch (name) {
         case 'Anoop sharma':
-          return '/src/assets/Anoop sharma.png';
+          return <img src={assets.Anoop_Sharma} />;
         case 'Yogesh':
           return '/src/assets/Yogesh.png'; // Assuming this is Yogesh's image path
         case 'Shankar Kumar':

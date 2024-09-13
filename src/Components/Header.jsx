@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './Header.css'
+import { assets } from '../assets/assets';
 const Header = ({ grouping, ordering, handleGroupingChange, handleOrderingChange }) => {
   const [isDisplayOptionsVisible, setDisplayOptionsVisible] = useState(false);
 
@@ -12,8 +13,8 @@ const Header = ({ grouping, ordering, handleGroupingChange, handleOrderingChange
     <div className="header">
       <div className="left-section">
       <button className="display-options-btn" onClick={toggleDisplayOptions}>
-        <img src="/src/assets/Display.png"  className="display-icon" />
-        Display  <img src="/src/assets/down.png"  />
+        <img src={assets.Display}  className="display-icon" />
+        Display  <img src={assets.Down}  />
         </button>
         {isDisplayOptionsVisible && (
           <div className="dropdown display-options-dropdown">

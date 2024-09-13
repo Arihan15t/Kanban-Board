@@ -76,17 +76,17 @@ const KanbanBoard = ({ tickets = [], users = [], grouping, ordering }) => {
     if (grouping === 'userId') {
       switch (group) {
         case 'Anoop sharma':
-          return '/src/assets/icons_FEtask/Anoop sharma.svg';
+          return '/src/assets/Pics/Anoop sharma.png';
         case 'Yogesh':
-          return '/src/assets/icons_FEtask/Yogesh.svg';
+          return '/src/assets/Pics/Yogesh.png';
         case 'Shankar Kumar':
-          return '/src/assets/icons_FEtask/Shankar Kumar.svg';
+          return '/src/assets/Pics/Shankar Kumar.png';
         case 'Ramesh':
-          return '/src/assets/icons_FEtask/Ramesh.svg';
+          return '/src/assets/Pics/Ramesh.png';
         case 'Suresh':
-          return '/src/assets/icons_FEtask/Suresh.svg';
+          return '/src/assets/Pics/Suresh.png';
         default:
-          return '/src/assets/icons_FEtask/default-user.svg';
+          return '/src/assets/Pics/default-user.png';
       }
     }
 
@@ -96,15 +96,15 @@ const KanbanBoard = ({ tickets = [], users = [], grouping, ordering }) => {
         const priority = parseInt(priorityMatch[1], 10);
         switch (priority) {
           case 4:
-            return '/src/assets/icons_FEtask/SVG - Urgent Priority colour.svg';
+            return '/src/assets/Pics/SVG - Urgent Priority colour.png';
           case 3:
-            return '/src/assets/icons_FEtask/Img - High Priority.svg';
+            return '/src/assets/Pics/Img - High Priority.png';
           case 2:
-            return '/src/assets/icons_FEtask/Img - Medium Priority.svg';
+            return '/src/assets/Pics/Img - Medium Priority.png';
           case 1:
-            return '/src/assets/icons_FEtask/Img - Low Priority.svg';
+            return '/src/assets/Pics/Img - Low Priority.png';
           case 0:
-            return '/src/assets/icons_FEtask/No-priority.svg';
+            return '/src/assets/Pics/No-priority.png';
           default:
             return null;
         }
@@ -114,13 +114,13 @@ const KanbanBoard = ({ tickets = [], users = [], grouping, ordering }) => {
     if (grouping === 'status') {
       switch (group) {
         case 'Todo':
-          return '/src/assets/icons_FEtask/To-do.svg';
+          return '/src/assets/Pics/To-do.png';
         case 'In progress':
-          return '/src/assets/icons_FEtask/in-progress.svg';
+          return '/src/assets/Pics/in-progress.png';
         case 'Backlog':
-          return '/src/assets/icons_FEtask/Backlog.svg';
+          return '/src/assets/Pics/Backlog.png';
         default:
-          return '/src/assets/icons_FEtask/Cancelled.svg';
+          return '/src/assets/Pics/Cancelled.png';
       }
     }
 
@@ -149,8 +149,8 @@ const KanbanBoard = ({ tickets = [], users = [], grouping, ordering }) => {
               {getPriorityLabel(group)} {items.length}
             </h2>
             <div className="icons">
-              <img src="/src/assets/icons_FEtask/add.svg" alt="Add icon" className="add-icon" />
-              <img src="/src/assets/icons_FEtask/3 dot menu.svg" alt="Menu icon" className="menu-icon" />
+              <img src="/src/assets/Pics/add.png" alt="Add icon" className="add-icon" />
+              <img src="/src/assets/Pics/3 dot menu.png" alt="Menu icon" className="menu-icon" />
             </div>
           </div>
           {items.length > 0 ? (

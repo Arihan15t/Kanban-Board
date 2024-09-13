@@ -1,7 +1,7 @@
 import React from 'react';
 import KanbanCard from './KanbanCard';
 import './KanbanBoard.css';
-
+import {assets} from '../assets/assets'
 const KanbanBoard = ({ tickets = [], users = [], grouping, ordering }) => {
   // Helper function to get a user object by userId
   const getUserById = (userId) => users.find((user) => user.id === userId);
@@ -74,9 +74,9 @@ const KanbanBoard = ({ tickets = [], users = [], grouping, ordering }) => {
   // Function to get the appropriate icon based on the group
   const getGroupIcon = (group) => {
     if (grouping === 'userId') {
-      switch (group) {
+     switch (group) {
         case 'Anoop sharma':
-          return '/src/assets/Anoop sharma.png';
+          return <img src={assets.Anoop_Sharma}  />; 
         case 'Yogesh':
           return '/src/assets/Yogesh.png';
         case 'Shankar Kumar':
@@ -142,15 +142,14 @@ const KanbanBoard = ({ tickets = [], users = [], grouping, ordering }) => {
             <h2>
               <img
                 src={getGroupIcon(group)}
-                alt={`${group} icon`}
                 className="group-icon"
                 style={{ marginRight: '8px', width: '12px', height: '12px' }}
               />
               {getPriorityLabel(group)} {items.length}
             </h2>
             <div className="icons">
-              <img src="/src/assets/add.png" alt="Add icon" className="add-icon" />
-              <img src="/src/assets/3 dot menu.png" alt="Menu icon" className="menu-icon" />
+              <img src={assets.add} className="add-icon" />
+              <img src={assets.dot_menu_3}  className="menu-icon" />
             </div>
           </div>
           {items.length > 0 ? (

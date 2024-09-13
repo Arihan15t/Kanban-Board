@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import KanbanBoard from './Components/KanbanBoard';
 import Header from './Components/Header';
-import { fetchTickets } from './Utils/Api'; // Adjust import based on your structure
+import { fetchTickets } from './Utils/Api'; 
 
 
 function App() {
   const [tickets, setTickets] = useState([]);
   const [users, setUsers] = useState([]);
-  const [grouping, setGrouping] = useState('status'); // default grouping by 'status'
-  const [ordering, setOrdering] = useState('priority'); // default ordering by 'priority'
+  const [grouping, setGrouping] = useState('status'); 
+  const [ordering, setOrdering] = useState('priority');
 
   useEffect(() => {
     const getTickets = async () => {
@@ -24,7 +24,7 @@ function App() {
   };
 
   const handleOrderingChange = (e) => {
-    setOrdering(e.target.value); // Update ordering state
+    setOrdering(e.target.value); 
   };
 
   return (

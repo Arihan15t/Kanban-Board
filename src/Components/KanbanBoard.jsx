@@ -74,9 +74,9 @@ const KanbanBoard = ({ tickets = [], users = [], grouping, ordering }) => {
   // Function to get the appropriate icon based on the group
   const getGroupIcon = (group) => {
     if (grouping === 'userId') {
-     switch (group) {
+      switch (group) {
         case 'Anoop sharma':
-          return <img src={assets.Anoop_Sharma}  />; 
+          return '/src/assets/Anoop sharma.png';
         case 'Yogesh':
           return '/src/assets/Yogesh.png';
         case 'Shankar Kumar':

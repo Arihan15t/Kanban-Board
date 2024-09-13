@@ -1,7 +1,8 @@
 import React from 'react';
 import KanbanCard from './KanbanCard';
 import './KanbanBoard.css';
-import {assets} from '../assets/assets'
+import { assets } from '../assets/assets'; // Assuming assets is imported correctly
+
 const KanbanBoard = ({ tickets = [], users = [], grouping, ordering }) => {
   // Helper function to get a user object by userId
   const getUserById = (userId) => users.find((user) => user.id === userId);
@@ -71,57 +72,49 @@ const KanbanBoard = ({ tickets = [], users = [], grouping, ordering }) => {
     return group;
   };
 
-  // Function to get the appropriate icon based on the group
+  // Function to get the appropriate icon based on the group using assets
   const getGroupIcon = (group) => {
+    // User icon mapping
+    const userIcons = {
+      'anoop sharma': assets.Anoop_Sharma,
+      'yogesh': assets.Yogesh,
+      'shankar kumar': assets.Shankar_Kumar,
+      'ramesh': assets.Ramesh,
+      'suresh': assets.Suresh,
+    };
+
+    // Priority icon mapping
+    const priorityIcons = {
+      4: assets.Urgent_Priority_Color,
+      3: assets.High_Priority,
+      2: assets.Medium_Priority,
+      1: assets.Low_Priority,
+      0: assets.No_Priority,
+    };
+
+    // Status icon mapping
+    const statusIcons = {
+      'Todo': assets.To_do,
+      'In progress': assets.In_Progress,
+      'Backlog': assets.Backlog,
+      'Canceled': assets.Canceled,
+    };
+
+    // Determine group type
     if (grouping === 'userId') {
-      switch (group) {
-        case 'Anoop sharma':
-          return '/src/assets/Anoop sharma.png';
-        case 'Yogesh':
-          return '/src/assets/Yogesh.png';
-        case 'Shankar Kumar':
-          return '/src/assets/Shankar Kumar.png';
-        case 'Ramesh':
-          return '/src/assets/Ramesh.png';
-        case 'Suresh':
-          return '/src/assets/Suresh.png';
-        default:
-          return '/src/assets/default-user.png';
-      }
+      return userIcons[group.toLowerCase()] || assets.Default_User;
     }
 
     if (grouping === 'priority') {
       const priorityMatch = group.match(/Priority (\d+)/);
       if (priorityMatch) {
         const priority = parseInt(priorityMatch[1], 10);
-        switch (priority) {
-          case 4:
-            return '/src/assets/SVG - Urgent Priority colour.png';
-          case 3:
-            return '/src/assets/Img - High Priority.png';
-          case 2:
-            return '/src/assets/Img - Medium Priority.png';
-          case 1:
-            return '/src/assets/Img - Low Priority.png';
-          case 0:
-            return '/src/assets/No-priority.png';
-          default:
-            return null;
-        }
+        return priorityIcons[priority] || null;
       }
     }
 
     if (grouping === 'status') {
-      switch (group) {
-        case 'Todo':
-          return '/src/assets/To-do.png';
-        case 'In progress':
-          return '/src/assets/in-progress.png';
-        case 'Backlog':
-          return '/src/assets/Backlog.png';
-        default:
-          return '/src/assets/Cancelled.png';
-      }
+      return statusIcons[group] || assets.Cancelled;
     }
 
     return null;
@@ -144,12 +137,13 @@ const KanbanBoard = ({ tickets = [], users = [], grouping, ordering }) => {
                 src={getGroupIcon(group)}
                 className="group-icon"
                 style={{ marginRight: '8px', width: '12px', height: '12px' }}
+                alt={`${group}-icon`}
               />
               {getPriorityLabel(group)} {items.length}
             </h2>
             <div className="icons">
-              <img src={assets.add} className="add-icon" />
-              <img src={assets.dot_menu_3}  className="menu-icon" />
+              <img src={assets.add} className="add-icon" alt="add-icon" />
+              <img src={assets.dot_menu_3} className="menu-icon" alt="menu-icon" />
             </div>
           </div>
           {items.length > 0 ? (

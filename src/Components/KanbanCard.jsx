@@ -7,15 +7,15 @@ const KanbanCard = ({ ticket, user }) => {
     const getUserImage = (name) => {
       switch (name) {
         case 'Anoop sharma':
-          return '/src/assets/icons_FEtask/Anoop sharma.svg';
+          return '/src/assets/Pics/Anoop sharma.png';
         case 'Yogesh':
-          return '/src/assets/icons_FEtask/Yogesh.svg'; // Assuming this is Yogesh's image path
+          return '/src/assets/Pics/Yogesh.png'; // Assuming this is Yogesh's image path
         case 'Shankar Kumar':
-          return '/src/assets/icons_FEtask/Shankar Kumar.svg';
+          return '/src/assets/Pics/Shankar Kumar.png';
         case 'Ramesh':
-          return '/src/assets/icons_FEtask/Ramesh.svg';
+          return '/src/assets/Pics/Ramesh.png';
         case 'Suresh':
-          return '/src/assets/icons_FEtask/Suresh.svg';
+          return '/src/assets/Pics/Suresh.png';
         default:
           return null; // No specific image available, fallback to initials
       }

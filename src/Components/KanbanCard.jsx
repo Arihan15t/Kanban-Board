@@ -5,17 +5,17 @@ import { assets } from '../assets/assets';
 const KanbanCard = ({ ticket, user }) => {
     // Function to get the user image based on the user's name
     const getUserImage = (name) => {
-      switch (name) {
-        case 'Anoop sharma':
+      switch (name.toLowerCase() {
+        case 'anoop sharma':
           return <img src={assets.Anoop_Sharma} />;
-        case 'Yogesh':
-          return '/src/assets/Yogesh.png'; // Assuming this is Yogesh's image path
-        case 'Shankar Kumar':
-          return '/src/assets/Shankar Kumar.png';
-        case 'Ramesh':
-          return '/src/assets/Ramesh.png';
-        case 'Suresh':
-          return '/src/assets/Suresh.png';
+        case 'anurag':
+          return <img src={assets.Anurag} />;
+        case 'shankar kumar':
+          return <img src={assets.Shankar_Kumar}  />;
+        case 'ramesh':
+          return <img src={assets.Ramesh} />;
+        case 'suresh':
+          return <img src={assets.Suresh}  />;
         default:
           return null; // No specific image available, fallback to initials
       }

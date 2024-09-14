@@ -1,13 +1,13 @@
 import React from 'react';
 import KanbanCard from './KanbanCard';
 import './KanbanBoard.css';
-import { assets } from '../assets/assets'; // Assuming assets is imported correctly
+import { assets } from '../assets/assets'; 
 
 const KanbanBoard = ({ tickets = [], users = [], grouping, ordering }) => {
-  // Helper function to get a user object by userId
+
   const getUserById = (userId) => users.find((user) => user.id === userId);
 
-  // Map priority values to custom labels
+
   const priorityLabels = {
     4: 'Urgent',
     3: 'High',
@@ -16,7 +16,6 @@ const KanbanBoard = ({ tickets = [], users = [], grouping, ordering }) => {
     0: 'No priority',
   };
 
-  // Group tickets based on the current 'grouping' value (status, userId, priority)
   const groupTickets = (tickets) => {
     if (!Array.isArray(tickets)) return [];
 
